@@ -15,11 +15,9 @@ La aplicación permite:
 - Visualizar modelos 3D
 
 ## Cómo ejecutar
-1. Abrir el enlace de GitHub Pages.
+1. Abre el siguiente enlace https://alejandraalvarado03.github.io/Taller_AR/
 2. Permitir acceso a la cámara.
 3. Enfocar el marcador correspondiente.
 
 ## Autores
-Alejandra Alvarado
-Julian Perez
-Karen Torres
+Alejandra Alvarado, Julian Perez, Karen Torres
