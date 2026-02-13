@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Sistemas del Cuerpo Humano</title>
+
+  <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+</head>
+
+<body style="margin:0; overflow:hidden; background:black;">
+
+  <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix;">
+
+    <a-assets>
+      <a-asset-item id="circulatorio" src="assets/Sistema_circulatorio.glb"></a-asset-item>
+      <a-asset-item id="muscular"     src="assets/Sistema_muscular.glb"></a-asset-item>
+      <a-asset-item id="oseo"         src="assets/Sistema_oseo.glb"></a-asset-item>
+    </a-assets>
+
+    <a-light type="ambient" color="#000000"></a-light>
+    <a-light type="directional" color="#FFFFFF" intensity="0.6" position="1 1 1"></a-light>
+
+    <!-- Sistema circulatorio - marcadorcustom-->
+    <a-marker type="pattern" url="assets/patternHuman.patt">
+      <a-entity gltf-model="#circulatorio"
+                scale="0.02 0.02 0.02"
+                position="0 0.5 0"
+                rotation="0 0 0">
+      </a-entity>
+    </a-marker>
+
+    <!-- Sistema muscular - Hiro -->
+    <a-marker preset="hiro">
+      <a-entity gltf-model="#muscular"
+                scale="50 50 50"
+                position="0 0.5 0"
+                rotation="0 0 0">
+      </a-entity>
+    </a-marker>
+
+    <!-- Sistema óseo - maracadorcustom2 -->
+    <a-marker type="pattern" url="assets/patternOseo.patt">
+      <a-entity gltf-model="#oseo"
+                scale="0.1 0.1 0.1"
+                position="0 0.5 0"
+                rotation="0 0 0">
+      </a-entity>
+    </a-marker>
+
+    <!-- Cámara -->
+    <a-entity camera></a-entity>
+
+  </a-scene>
+
+</body>
+</html>
